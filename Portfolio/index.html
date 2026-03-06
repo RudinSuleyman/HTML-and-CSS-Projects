@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudin Suleyman | Creative Portfolio</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0c29;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #302b63; /* Background Color */
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: #00d2ff; /* Font Color */
+            text-decoration: none;
+            padding: 14px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #24243e; /* Hover Effect */
+            color: #ff00c1;
+            border-radius: 5px;
+        }
+
+        /* Video Header with Text Overlay (Autoplay, Mute, Loop) */
+        .video-container {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .video-overlay-text {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* Image Styling (Center, Filter, Rounded) */
+        .profile-container {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .profile-img {
+            width: 300px;
+            border-radius: 50px; /* Rounded Edges */
+            filter: hue-rotate(45deg) saturate(150%); /* CSS Filter */
+            display: block;
+            margin: 0 auto; /* Centered Image */
+        }
+
+        /* Image Overlay Fade */
+        .overlay-box {
+            position: relative;
+            width: 300px;
+            margin: 20px auto;
+        }
+        .overlay-img { display: block; width: 100%; border-radius: 15px; }
+        .overlay-fade {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            height: 100%; width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #ff00c1;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay-box:hover .overlay-fade { opacity: 0.9; }
+
+        /* Two-Column Layout */
+        .column-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+            gap: 20px;
+        }
+        .column {
+            width: 45%; /* Width */
+            height: 250px; /* Height */
+            padding: 20px;
+            color: #00d2ff; /* Font Color */
+            background: #24243e;
+            border: 2px solid #ff00c1;
+            border-radius: 10px;
+        }
+
+        /* Paragraph Hover Effect */
+        p.hover-text {
+            padding: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+            text-align: center;
+        }
+        p.hover-text:hover {
+            color: #ff00c1;
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+
+        /* Styled Table */
+        .table-section { padding: 50px; display: flex; justify-content: center; }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            border: 3px solid #00d2ff; /* Border */
+        }
+        th, td {
+            padding: 15px; /* Padding in cells */
+            text-align: left;
+            border: 1px solid #302b63;
+        }
+        tr:first-child {
+            background-color: #ff00c1; /* Background color in top row */
+            color: white;
+        }
+
+        /* Centered Image with Text Overlay */
+        .text-over-img {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+        }
+        .text-over-img img { width: 80%; border-radius: 20px; }
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 30px;
+            text-align: center; /* Centered */
+            font-weight: bold; /* Bold */
+            border-top: 2px solid #ff00c1;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="video-container" id="home">
+        <video autoplay muted loop>
+            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-text">
+            <h1>RUDIN SULEYMAN</h1>
+            <p>Creative Developer & Tech Enthusiast</p>
+        </div>
+    </div>
+
+    <div class="profile-container" id="about">
+        <h2>Visual Styles</h2>
+        <img src="https://picsum.photos/400/400" alt="Rudin" class="profile-img">
+        <p class="hover-text">Hover over me to see a CSS transformation!</p>
+    </div>
+
+    <div class="column-container">
+        <div class="column">
+            <h3>Column One</h3>
+            <p>This layout uses flexbox to define width and height. The font color is customized to match Rudin's theme.</p>
+        </div>
+        <div class="column">
+            <h3>Column Two</h3>
+            <p>This provides a unique balance to the page design, ensuring responsiveness and clear structure.</p>
+        </div>
+    </div>
+
+    <div class="overlay-box">
+        <img src="https://picsum.photos/300/300?random=1" alt="Overlay" class="overlay-img">
+        <div class="overlay-fade">
+            <div class="text">Project View</div>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+                <th>Experience</th>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>Advanced</td>
+                <td>2 Years</td>
+            </tr>
+            <tr>
+                <td>CSS3 (Bootstrap)</td>
+                <td>Intermediate</td>
+                <td>1 Year</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="text-over-img">
+        <img src="https://picsum.photos/1200/400?grayscale" alt="Banner">
+        <div class="centered-text">Coding the Future</div>
+    </div>
+
+    <footer>
+        <p>Rudin Suleyman Portfolio &copy; 2026 | Built with Passion and Bootstrap</p>
+    </footer>
+
+</body>
+</html>
