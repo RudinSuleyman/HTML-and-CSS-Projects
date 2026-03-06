@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudin Suleyman | Cinema Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            position: relative; 
+            scroll-behavior: smooth;
+        }
+        /* Custom Jumbotron Styling */
+        .jumbotron {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #dee2e6 100%);
+            border-radius: 0.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .card-img-top {
+            height: 400px;
+            object-fit: cover;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">RUDIN SULEYMAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#showtimes">Showtimes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron shadow-sm">
+            <h1 class="display-3">Rudin’s Cinema Lab</h1>
+            <p class="lead">Experience the magic of cinema through the lens of modern web design.</p>
+            <hr class="my-4 w-25 mx-auto">
+            <p class="text-muted">A Bootstrap Project Assignment for Web Development</p>
+            <a class="btn btn-primary btn-lg" href="#showtimes" role="button">View Showtimes</a>
+        </div>
+    </div>
+
+    <section id="about" class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="display-5 mb-4">About Rudin's Project</h2>
+                <p class="fs-5">Welcome! My name is <strong>Rudin Suleyman</strong>. This site is a demonstration of responsive design using the Bootstrap framework, featuring specialized navigation, card decks, and info-pill badges for a cinematic experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="showtimes" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Now Showing</h2>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjcxYTQtYjJlOS00YTE1LWIyZGYtOGRlOTBlMWZmYTliXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Kong Skull Island">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase fw-bold">Kong: Skull Island</h5>
+                            <p class="card-text">Scientists and soldiers venture onto an uncharted island and encounter the mighty Kong, the last of his kind, amidst prehistoric threats.</p>
+                            
+                            <div class="mt-3">
+                                <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzBkNjdjZTctNjdhOS00NmIyLTlkNjQtY2EwNGMwYmZjNTIxXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Ghost in the Shell">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase fw-bold">Ghost in the Shell</h5>
+                            <p class="card-text">Set in a cyberpunk future, Major is a human-cyborg hybrid leading an elite task force against dangerous criminals and hackers.</p>
+                            
+                            <div class="mt-3">
+                                <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://lumiere-a.akamaihd.net/v1/images/p_beautyandthebeast_19752_32e65c36.jpeg" class="card-img-top" alt="Beauty and the Beast">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase fw-bold">Beauty and the Beast</h5>
+                            <p class="card-text">A young woman is imprisoned by a beast in his castle. She learns to look beyond his appearance to find the heart of a prince.</p>
+                            
+                            <div class="mt-3">
+                                <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+                                <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="deals" class="container text-center py-5">
+        <div class="p-5 text-white bg-dark rounded-5 shadow">
+            <h2 class="display-6">Exclusive Student Deals</h2>
+            <p class="lead">Rudin’s Rewards: Get a free large drink with any ticket purchase!</p>
+            <p class="small text-secondary">Valid for students with current ID only.</p>
+            <button class="btn btn-outline-info px-4">Claim My Coupon</button>
+        </div>
+    </section>
+
+    <footer class="bg-white text-center py-4 border-top">
+        <p class="text-muted mb-0">Designed by <strong>Rudin Suleyman</strong> &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
